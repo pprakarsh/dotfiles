@@ -4,19 +4,21 @@ cd $BASEDIR
 
 
 ln -s ${PWD}/.bashrc ~/.bashrc
-ln -s ${PWD}/.zshrc ~/.zshrc
 ln -s ${PWD}/.tmux.conf ~/.tmux.conf
 ln -s ${PWD}/.gitconfig ~/.gitconfig
 
 if [ ! -d "$HOME/.zprezto" ]; then
     
-    echo ".zprezto does not exists in home directory of the user"
+    echo ".zprezto does not exists in home directory of the user, so creating s-link"
     ln -s ${PWD}/.zprezto ~/.zprezto
 fi
 
 
 if [ ! -d "$HOME/.vim" ]; then
-    echo ".vim does exists in home directory of the user"
+    echo ".vim does not exists in home directory of the user, so creating s-link"
      ln -s ${PWD}/.vim ~/.vim
 fi
+
+ln -s ${PWD}/.zprezto/runcoms/zshrc ${HOME}/.zshrc
+ln -s ${PWD}/.zprezto/runcoms/zpreztorc ${HOME}/.zpreztorc
 
