@@ -1,0 +1,22 @@
+#!/usr/bin/zsh 
+BASEDIR=$(dirname $0)
+cd $BASEDIR
+
+
+ln -s ${PWD}/.bashrc ~/.bashrc
+ln -s ${PWD}/.zshrc ~/.zshrc
+ln -s ${PWD}/.tmux.conf ~/.tmux.conf
+ln -s ${PWD}/.gitconfig ~/.gitconfig
+
+if [ ! -d "$HOME/.zprezto" ]; then
+    
+    echo ".zprezto does not exists in home directory of the user"
+    ln -s ${PWD}/.zprezto ~/.zprezto
+fi
+
+
+if [ ! -d "$HOME/.vim" ]; then
+    echo ".vim does exists in home directory of the user"
+     ln -s ${PWD}/.vim ~/.vim
+fi
+
