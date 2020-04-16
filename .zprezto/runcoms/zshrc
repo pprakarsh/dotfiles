@@ -38,3 +38,12 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias mux='pgrep -vx tmux > /dev/null/ && tmux new -d -s delete-me && tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && tmux kill-session -t delete-me && tmux attach || tmux attach'
+
+mkcd()
+{
+    mkdir -p -- "$1" && cd -P -- "$1"
+}
+v()
+{
+    tmux split-window -d && vim $1 && tmux select-pane -D && tmux resize-pane -U -y 8
+}

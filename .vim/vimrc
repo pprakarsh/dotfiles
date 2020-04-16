@@ -70,6 +70,11 @@ let g:tex_flavor='latex'
 set splitright      "Splitting window on right
 
 
+:hi TabLineFill ctermfg=255 ctermbg=235
+:hi TabLine ctermfg=255 ctermbg=240
+:hi TabLineSel ctermfg=255 ctermbg=178
+:hi Title ctermfg=255 ctermbg=235
+
 set path+=**        "For searching files recursively using find command
 
 source ~/.vim/vcomments.vim
