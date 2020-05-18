@@ -25,6 +25,8 @@ set cursorline		"for highlighting cursonline
 
 set showmatch		"highlight matching parenthisis
 
+filetype plugin indent on
+
 
 "For toggle between relative number and number
 nnoremap <silent> ,<space> :set nonu <bar> set nu rnu <CR>
@@ -80,3 +82,5 @@ set path+=**        "For searching files recursively using find command
 source ~/.vim/vcomments.vim
 map <C-a> :call Comment()<CR>
 map <C-b> :call Uncomment()<CR>
+
+packloadall

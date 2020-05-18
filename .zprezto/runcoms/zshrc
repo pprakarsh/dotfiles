@@ -36,6 +36,8 @@ alias tmux='tmux -u -2'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+# Command line alias to start the browser-sync server
+alias serve="browser-sync start --server --files ."
 
 alias mux='pgrep -vx tmux > /dev/null/ && tmux new -d -s delete-me && tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && tmux kill-session -t delete-me && tmux attach || tmux attach'
 

@@ -19,6 +19,11 @@ if [ ! -d "$HOME/.vim" ]; then
      ln -s ${PWD}/.vim ~/.vim
 fi
 
+if [ ! -d "$HOME/.config/nvim" ]; then
+    echo ".config/nvim does not exist in ~/.config/.nvim, so creating s-link"
+    ln -s ${PWD}/nvim ~/.config/nvim
+fi
+
 ln -s ${PWD}/.zprezto/runcoms/zshrc ${HOME}/.zshrc
 ln -s ${PWD}/.zprezto/runcoms/zpreztorc ${HOME}/.zpreztorc
 
